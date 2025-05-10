@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --btn-bg-color: rgb(229, 9, 20);
+    --btn-hover-color: rgb(210, 9, 10);
+    --font-color: rgb(255, 255, 255);
+    --card-color: rgb(31, 19, 35);
+    --accordion-color: #292e3b;
+}
+
+.hero {
+    background-image: url('../assets/img/Et-netflix-bg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    position: relative;
+
+}
+
+.hero::before {
+    content: " ";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px clamp(1rem, 5vw, 9rem) 0;
+}
+
+header .logo {
+    width: 200px;
+    z-index: 5;
+}
+
+.logo img {
+    width: 100%;
+}
+
+header .btn-sign {
+    border: none;
+    color: var(--font-color);
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    background: var(--btn-bg-color);
+    font-size: 1.1em;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero .hero-center {
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto;
+    max-width: 550px;
+    width: 90%;
+    padding: 10px;
+    height: auto;
+    color: var(--font-color);
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    gap: 25px;
+}
+
+.hero-center .title {
+    font-size: clamp(2rem, 6vw, 3.2rem);
+    width: 100%;
+    font-weight: 700;
+}
+
+.email-container {}
+
+.email-container input {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid var(--font-color);
+    background: var(--accordion-color);
+    color: var(--font-color);
+    font-size: 1em;
+}
+
+input[type='email']:focus {
+    border-radius: 5px;
+    outline: 2px solid var(--font-color);
+}
+
+.email-container .btn-email {
+    border: none;
+    color: var(--font-color);
+    padding: 20px 30px;
+    cursor: pointer;
+    background: var(--btn-bg-color);
+    font-size: 1.2em;
+    font-weight: 800px;
+    text-align: center;
+    gap: 10px;
+} 
+.email-container .btn-email:hover{
+        background: var(--btn-hover-color);
+}
