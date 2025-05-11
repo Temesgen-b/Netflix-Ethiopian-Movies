@@ -84,6 +84,7 @@ header .btn-sign {
     width: 100%;
     font-weight: 700;
 }
+
 .email-container input {
     width: 300px;
     padding: 20px;
@@ -241,7 +242,44 @@ input[type='email']:focus {
 }
 
 .icon img {
-
     width: 60px;
     height: 60px;
+}
+
+/*Frequently section*/
+
+.Frequently {
+    color: var(--font-color);
+    background: black;
+    padding: 0 8rem 8rem;
+}
+.Frequently .title {
+    font-size: 1.4em;
+    margin-bottom: 1rem;
+}
+.accordion-container .acc-header {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid --font-color;
+    background: var(--accordion-color);
+    border: none;
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    text-align: start;
+    color: var(--font-color);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.acc-header i{
+    font-size: 3em;
+    font-weight: 100;
+} 
+.accordion-container .acc-header:hover {
+    background: #4d4d4d;
+}
+.acc-content {
+    display: none;
 }
