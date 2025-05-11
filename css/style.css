@@ -2,15 +2,16 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 :root {
     --btn-bg-color: rgb(229, 9, 20);
     --btn-hover-color: rgb(210, 9, 10);
     --font-color: rgb(255, 255, 255);
-    --card-color: rgb(31, 19, 35);
-    --accordion-color: #292e3b;
+    --card-color: radial-gradient(50% 500% at 50% -420%, rgba(64, 97, 231, 0.4) 80%,
+            rgba(0, 0, 0, 0.1) 100%), black;
+    --accordion-color: #333333;
 }
 
 .hero {
@@ -83,9 +84,6 @@ header .btn-sign {
     width: 100%;
     font-weight: 700;
 }
-
-.email-container {}
-
 .email-container input {
     width: 300px;
     padding: 20px;
@@ -110,7 +108,140 @@ input[type='email']:focus {
     font-weight: 800px;
     text-align: center;
     gap: 10px;
-} 
-.email-container .btn-email:hover{
-        background: var(--btn-hover-color);
+}
+
+.email-container .btn-email:hover {
+    background: var(--btn-hover-color);
+}
+
+/*gallery-container */
+.card-section {
+    background: var(--card-color);
+    padding: 0 8rem 8rem;
+    display: block;
+    font-family: 'Helvetica', sans-serif;
+}
+
+.card-section .title {
+    color: var(--font-color);
+    padding: 2.5rem 0 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.gallery-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.click-btn {
+    width: 1.5rem;
+    height: 7.5rem;
+    background: var(--accordion-color);
+    border-radius: 0.5rem;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.click-btn img {
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+
+}
+
+.card-gallery {
+    display: flex;
+    gap: 30px;
+    padding: 10px 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+}
+
+.card-gallery::-webkit-scrollbar {
+    display: none;
+}
+
+.move-thumbnail {
+    flex: 0 0 auto;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.move-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.num {
+    position: absolute;
+    z-index: 2;
+    bottom: 10px;
+    left: -1.2rem;
+    color: black;
+    font-weight: 700;
+    padding: 6px 12px;
+    font-size: 5rem;
+    line-height: 1;
+    -webkit-text-stroke: 0.1rem rgb(255, 255, 255);
+    text-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.move-thumbnail:hover {
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/*card section*/
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+
+.card-container .card {
+    flex: 1 1 22%;
+    height: 320px;
+    border-radius: 0.5rem;
+    background: rgba(64, 97, 231, 0.4);
+    color: var(--font-color);
+    padding: 0 1em;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.card .card-title {
+    font-size: 1.2em;
+    font-weight: 500;
+    margin-block: 1em;
+}
+
+.card .card-text {
+    font-size: 1em;
+    color: #ffffb3;
+    line-height: 1.3rem;
+}
+
+.card .icon {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+}
+
+.icon img {
+
+    width: 60px;
+    height: 60px;
 }
