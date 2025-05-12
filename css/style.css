@@ -253,10 +253,12 @@ input[type='email']:focus {
     background: black;
     padding: 0 8rem 8rem;
 }
+
 .Frequently .title {
     font-size: 1.4em;
     margin-bottom: 1rem;
 }
+
 .accordion-container .acc-header {
     width: 100%;
     padding: 15px;
@@ -273,13 +275,71 @@ input[type='email']:focus {
     align-items: center;
     justify-content: space-between;
 }
-.acc-header i{
+
+.acc-header i {
     font-size: 3em;
     font-weight: 100;
-} 
+}
+
 .accordion-container .acc-header:hover {
     background: #4d4d4d;
 }
+
 .acc-content {
     display: none;
+}
+
+/*footer section */
+footer {
+    background: black;
+    padding: 0 8rem 8rem;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.col {
+    padding: 10px 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+footer li a {
+    font-size: 1em;
+    color: #4d4d4d;
+}
+
+.copy-right {
+    display: inline-block;
+    color: var(--font-color);
+}
+
+select {
+    width: 120px;
+    padding: 5px;
+    background: var(--accordion-color);
+    color: var(--font-color);
+    border-radius: 0.2rem;
+    font-size: 1em;
+}
+
+.copy-right h5 {
+    margin: 2rem 0;
+    color: #4d4d4d;
+}
+
+.copy-right p {
+    font-size: 0.9em;
+    color: #4d4d4d;
+}
+
+.copy-right p a {
+    color: #4d4d4d;
 }
