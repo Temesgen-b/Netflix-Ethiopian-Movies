@@ -289,6 +289,63 @@ input[type='email']:focus {
     display: none;
 }
 
+/*footer email */
+.foo-email {
+    background: black;
+    color: var(--font-color);
+    padding: 0 0 8rem;
+}
+
+.foo-email .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h4 {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom:1rem;
+}
+
+.email-btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+    
+}
+
+.email-btn input {
+    color: var(--font-color);
+    padding:  1.2rem ;
+    border: 1px solid var(--font-color);
+    border-radius: 0.25rem;
+    width:100%;
+    font-weight: 600;
+    font-size: 1em;
+    max-width:40rem;
+    background: var(--accordion-color);
+}
+
+.foo-email .email-btn button {
+    background: var(--btn-bg-color);
+    color: var(--font-color);
+    border: none;
+    vertical-align: text-top;
+    border-radius: 0.25rem;
+    padding: 0.75rem  1.5rem;
+    font-size: 1.3em;
+    width:auto;
+    min-height: 3.5rem;
+    font-weight: 700;
+    transition: background-color, border-color 2s ease;
+    cursor: pointer;
+}
+
 /*footer section */
 footer {
     background: black;
