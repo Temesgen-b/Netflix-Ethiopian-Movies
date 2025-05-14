@@ -157,12 +157,16 @@ input[type='email']:focus {
     object-fit: cover;
 }
 
+.gallery-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
 .card-gallery {
     display: flex;
     gap: 30px;
-    padding: 10px 0;
-    overflow-x: auto;
-    scrollbar-width: none;
+    transition: transform 0.5s ease;
+    width: max-content;
 }
 
 .card-gallery::-webkit-scrollbar {
@@ -286,6 +290,8 @@ input[type='email']:focus {
 .acc-header i {
     font-size: 3em;
     font-weight: 100;
+    rotate: 0deg;
+    transition: all 0.01s;
 }
 
 .accordion-container .acc-header:hover {
@@ -325,6 +331,10 @@ input[type='email']:focus {
     gap: 10px;
 }
 
+.email_error {
+    color: green;
+}
+
 .email-btn input {
     color: var(--font-color);
     padding: 1.2rem;
@@ -336,15 +346,16 @@ input[type='email']:focus {
     max-width: 40rem;
     background: var(--accordion-color);
 }
+
 .email-btn input:focus {
     border-radius: 5px;
     outline: 2px solid var(--font-color);
- }
+}
 
- input:-webkit-autofill {
-  background-color: slategrey !important;
-  -webkit-box-shadow: 0 0 0 1000px black inset !important;
-  -webkit-text-fill-color: white !important;
+input:-webkit-autofill {
+    background-color: slategrey !important;
+    -webkit-box-shadow: 0 0 0 1000px black inset !important;
+    -webkit-text-fill-color: white !important;
 }
 
 .foo-email .email-btn button {
@@ -463,6 +474,11 @@ select {
         gap: 15px;
     }
 
+    .gallery-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
     .move-thumbnail {
         width: 120px;
         height: 180px;
@@ -560,6 +576,11 @@ select {
 
     .card-section {
         padding: 0 1.5rem 2rem;
+    }
+
+    .gallery-wrapper {
+        width: 100%;
+        overflow: hidden;
     }
 
     .gallery-container {
