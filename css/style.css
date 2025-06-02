@@ -31,7 +31,7 @@
     width: 100%;
     height: 100%;
     background: black;
-    opacity: 0.7;
+    opacity: 0.6;
     z-index: 1;
 }
 
@@ -88,9 +88,11 @@ header .btn-sign {
 .email-container input {
     width: 300px;
     padding: 20px;
+    border-radius: 0.25rem;
     border: 1px solid var(--font-color);
     background: var(--accordion-color);
     color: var(--font-color);
+    opacity: 0.5;
     font-size: 1em;
 }
 
@@ -100,13 +102,15 @@ input[type='email']:focus {
 }
 
 .email-container .btn-email {
+    width: auto;
     border: none;
+    border-radius: 0.25rem;
     color: var(--font-color);
     padding: 20px 30px;
     cursor: pointer;
     background: var(--btn-bg-color);
     font-size: 1.2em;
-    font-weight: 800px;
+    font-weight: 800;
     text-align: center;
     gap: 10px;
 }
@@ -151,15 +155,18 @@ input[type='email']:focus {
     width: 24px;
     height: 24px;
     object-fit: cover;
+}
 
+.gallery-wrapper {
+    width: 100%;
+    overflow: hidden;
 }
 
 .card-gallery {
     display: flex;
     gap: 30px;
-    padding: 10px 0;
-    overflow-x: auto;
-    scrollbar-width: none;
+    transition: transform 0.5s ease;
+    width: max-content;
 }
 
 .card-gallery::-webkit-scrollbar {
@@ -182,11 +189,12 @@ input[type='email']:focus {
     height: 100%;
     object-fit: cover;
     display: block;
+    z-index: 2;
 }
 
 .num {
     position: absolute;
-    z-index: 2;
+    z-index: 1;
     bottom: 10px;
     left: -1.2rem;
     color: black;
@@ -220,6 +228,9 @@ input[type='email']:focus {
     padding: 0 1em;
     position: relative;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between
 }
 
 .card .card-title {
@@ -235,9 +246,9 @@ input[type='email']:focus {
 }
 
 .card .icon {
-    position: absolute;
-    right: 10px;
-    bottom: 10px;
+    position: static;
+    margin: auto 0 1rem;
+    text-align: right;
 
 }
 
@@ -279,6 +290,8 @@ input[type='email']:focus {
 .acc-header i {
     font-size: 3em;
     font-weight: 100;
+    rotate: 0deg;
+    transition: all 0.01s;
 }
 
 .accordion-container .acc-header:hover {
@@ -289,10 +302,81 @@ input[type='email']:focus {
     display: none;
 }
 
+/*footer email */
+.foo-email {
+    background: black;
+    color: var(--font-color);
+    padding: 0 0 8rem;
+}
+
+.foo-email .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container h4 {
+    font-size: 1em;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.email-btn {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 10px;
+}
+
+.email_error {
+    color: green;
+}
+
+.email-btn input {
+    color: var(--font-color);
+    padding: 1.2rem;
+    border: 1px solid var(--font-color);
+    border-radius: 0.25rem;
+    width: 100%;
+    font-weight: 600;
+    font-size: 1em;
+    max-width: 40rem;
+    background: var(--accordion-color);
+}
+
+.email-btn input:focus {
+    border-radius: 5px;
+    outline: 2px solid var(--font-color);
+}
+
+input:-webkit-autofill {
+    background-color: slategrey !important;
+    -webkit-box-shadow: 0 0 0 1000px black inset !important;
+    -webkit-text-fill-color: white !important;
+}
+
+.foo-email .email-btn button {
+    background: var(--btn-bg-color);
+    color: var(--font-color);
+    border: none;
+    vertical-align: text-top;
+    border-radius: 0.25rem;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.3em;
+    width: auto;
+    min-height: 3.5rem;
+    font-weight: 700;
+    transition: background-color, border-color 2s ease;
+    cursor: pointer;
+}
+
 /*footer section */
 footer {
     background: black;
-    padding: 0 8rem 8rem;
+    padding: 0 8rem 10rem;
 }
 
 .footer-grid {
@@ -342,4 +426,277 @@ select {
 
 .copy-right p a {
     color: #4d4d4d;
+}
+
+
+/*tabulate responsive design */
+@media(max-width:1024px) {
+    header .logo {
+        width: 150px;
+    }
+
+    header .btn-sign {
+        padding: 7px 13px;
+        font-size: 1em;
+    }
+
+    .hero-center .title {
+        font-size: clamp(1.5rem, 5vw, 2.5rem);
+    }
+
+    .hero .hero-center {
+        gap: 20px;
+    }
+
+    .email-container input {
+        width: 280px;
+        padding: 15px;
+        font-size: 0.9em;
+    }
+
+    .email-container .btn-email {
+        padding: 15px 2px;
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+
+    /*gallery-container*/
+    .card-section {
+        padding: 0 3rem 4rem;
+
+    }
+
+    .card-section .title {
+        font-size: 1rem;
+    }
+
+    .card-gallery {
+        gap: 15px;
+    }
+
+    .gallery-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .move-thumbnail {
+        width: 120px;
+        height: 180px;
+    }
+
+    .num {
+        bottom: 5px;
+        left: -1rem;
+        padding: 3px 6px;
+        font-size: 4.5em;
+    }
+
+    .card-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .card-container .card {
+        flex: 1 1 100%;
+        height: auto;
+        padding: 0 1.5rem;
+    }
+
+    /*frequently*/
+    .Frequently {
+        padding: 0 3rem 4rem;
+    }
+
+    .Frequently .title {
+        font-size: 1.3em;
+    }
+
+    .accordion-container .acc-header {
+        padding: 16px;
+        font-size: 1em;
+    }
+
+    .acc-header i {
+        font-size: 2.5em;
+    }
+
+    .foo-email {
+        padding: 0 3rem 4rem;
+    }
+
+    .email-btn {
+        flex-wrap: nowrap;
+    }
+
+    .email-btn input {
+        padding: 1.1rem;
+        font-size: 1em;
+        max-width: 25rem;
+    }
+
+    .foo-email .email-btn button {
+        padding: 0.5rem 1.5rem;
+        font-size: 1.2em;
+    }
+
+    /*footer section */
+    footer {
+        padding: 0 3rem 10rem;
+
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0px;
+    }
+
+    .col {
+        padding: 0;
+    }
+
+    footer li {
+        margin-bottom: 15px;
+    }
+
+    footer li a {
+        font-size: 0.9em;
+    }
+
+}
+
+/*Mobile responsive design */
+@media(max-width:600px) {
+
+    .email-container input,
+    .email-container .btn-email {
+        width: 100%;
+        padding: 15px;
+        margin-bottom: 0.5rem;
+    }
+
+    .card-section {
+        padding: 0 1.5rem 2rem;
+    }
+
+    .gallery-wrapper {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .gallery-container {
+        gap: 10px;
+    }
+
+    .click-btn {
+        width: 1.5rem;
+        height: 7rem;
+    }
+
+    .click-btn img {
+        width: 20px;
+        height: 20px;
+    }
+
+    .card-gallery {
+        gap: 15px;
+        padding: 0.5rem 0;
+    }
+
+    .move-thumbnail {
+        width: 120px;
+        height: 180px;
+    }
+
+    .num {
+        bottom: 5px;
+        left: -0.1.3rem;
+        padding: 3px 6px;
+        font-size: 4.5em;
+    }
+
+    .card-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .card-container .card {
+        flex: 1 1 100%;
+        height: auto;
+        padding: 0 1rem;
+    }
+
+    .card .icon {
+        position: static;
+        margin: auto 0;
+    }
+
+    .icon img {
+        width: 50px;
+        height: 50px;
+    }
+
+    /*frequently*/
+    .Frequently {
+        padding: 1rem 1.5rem 2rem;
+    }
+
+    .Frequently .title {
+        font-size: 1.2em;
+    }
+
+    .accordion-container .acc-header {
+        padding: 16px;
+        font-size: 1em;
+    }
+
+    .acc-header i {
+        font-size: 2em;
+    }
+
+    .foo-email {
+        padding: 1rem 1.5rem 2rem;
+    }
+
+    .email-btn {
+        flex-direction: column;
+        align-items: start;
+        gap: 10px;
+    }
+
+    .email-btn input {
+        padding: 1rem;
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    .foo-email .email-btn button {
+        padding: 0.5rem 1.5rem;
+        font-size: 1.1em;
+        width: auto;
+        min-height: 3.5rem;
+    }
+
+    /*footer*/
+
+    footer {
+        padding: 1.5rem 1.5rem 8rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        padding: 10px 0;
+    }
+
+    .col {
+        padding: 5px 0;
+    }
+
+    footer li {
+        margin-bottom: 15px;
+    }
+
+    footer li a {
+        font-size: 0.9em;
+    }
 }
